@@ -1,0 +1,36 @@
+@import './variables.scss';
+.product{
+    @include display-flex();
+    flex-direction: column;
+}
+
+#main-image{
+    height: 400px;
+    width: 400px;
+    cursor: pointer;
+    border-radius: $border-radius;
+}
+
+.product-thumbnail{
+    @include display-flex();
+    margin-top: 20px;
+    width: 400px;
+    cursor: pointer;
+    justify-content: space-between;
+    img{
+        border-radius: $border-radius;
+        &:hover{
+            opacity: 0.6;
+          }
+    }
+    .selected {
+        opacity: 30%;
+        border: 2px solid $main-color;
+        img{
+          opacity: 0.7%;
+        }
+    }
+}
+.previous-product-icon,.next-product-icon{
+    display: none;
+}

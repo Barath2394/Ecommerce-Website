@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+*{
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+body{
+  margin: 0 15%;
+}
+
+.main-logo { 
+  height: 20px;
+}
+
+main{
+  @include display-flex();
+  justify-content: space-between;
+  margin: 5%;
+  width: 90%;
+}
+
+.product{
+  width: 50%;
+}
+.product-description{
+  width: 50%;
+}
+

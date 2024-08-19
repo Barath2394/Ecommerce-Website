@@ -1,0 +1,11 @@
+$main-color: rgba(254,125,29,255);
+$border-color: rgba(232,232,234,255);
+$text-color: #a8a5a5;
+$border-radius:10px;
+
+@mixin display-flex() {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}

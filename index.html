@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    
+<head><meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main-scss/backdrop.css">
+    <link rel="stylesheet" href="./main-scss/cart.css">
+    <link rel="stylesheet" href="./main-scss/header.css">
+    <link rel="stylesheet" href="./main-scss/productDescription.css">
+    <link rel="stylesheet" href="./main-scss/productImage.css">
+    <link rel="stylesheet" href="./main-scss/temp.css">
+    <link rel="stylesheet" href="./mobile-scss/mobile.css">
+</head>
+
+<body >
+    <header>
+        <nav>
+            <div class="menu-bar">
+                <img src="images/icon-menu.svg" alt="menu-icon" onclick="menuBar()">
+            </div>
+            <div class="main-logo">
+                <a href="#"><img src="images/logo.svg" alt="main-logo"></a>
+            </div>
+            <ul>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="right-navigation-component">
+                <a  href="#cart-icon"><img class="cart-icon" src="images/icon-cart.svg" alt="cart-icon"
+                        onclick="toggleCart('toggle-cart')"></a></li>
+                <a  href="#"><img class="avatar-icon" src="images/image-avatar.png" alt="profile-icon" height="40px"></a></li>
+            </div>
+        </nav>
+    </header>
+    <main onclick="toggleCart('close-cart')">
+        <div class="product">
+            <button class="previous-product-icon" onclick="showUpComingImage('previous','mobile')"><svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg></button>
+            <button class="next-product-icon" onclick="showUpComingImage('next','mobile')"><svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg></button>
+            <div class="product-image">
+                <img id="main-image" src="images/image-product-1.jpg" alt="product-image" onclick="backDrop()">
+            </div>
+            <div class="product-thumbnail">
+                  <img class="active" src="images/image-product-1-thumbnail.jpg" alt="product-thumbnail" onclick="changeImage('images/image-product-1.jpg', this)" height="80px" width="80px">
+                  <img src="images/image-product-2-thumbnail.jpg" alt="product-thumbnail" onclick="changeImage('images/image-product-2.jpg', this)" height="80px" width="80px">
+                  <img src="images/image-product-3-thumbnail.jpg" alt="product-thumbnail" onclick="changeImage('images/image-product-3.jpg', this)" height="80px" width="80px">
+                  <img src="images/image-product-4-thumbnail.jpg" alt="product-thumbnail" onclick="changeImage('images/image-product-4.jpg', this)" height="80px" width="80px">
+                </div>
+            </div>
+        </div>
+        <div class="backdrop" onclick="closePreview(event)">
+            <div class="close-icon" onclick="closePreview(event)"><svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fill-rule="evenodd"/></svg></div>
+            <div class="product-preview">
+                <button class="previous-icon" onclick="showUpComingImage('previous','desktop')"><svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg></button>
+                <button class="next-icon" onclick="showUpComingImage('next','desktop')"><svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg></button>
+                <div class="product-image">
+                    <img id="preview-image" src="images/image-product-1.jpg" alt="product-image" onclick="backDrop()">
+                </div>
+                <div class="product-preview-thumbnail">
+                      <img class="active" src="images/image-product-1-thumbnail.jpg" alt="product-thumbnail" onclick="changePreviewImage('images/image-product-1.jpg', this)" height="80px" width="80px">
+                      <img src="images/image-product-2-thumbnail.jpg" alt="product-thumbnail" onclick="changePreviewImage('images/image-product-2.jpg', this)" height="80px" width="80px">
+                      <img src="images/image-product-3-thumbnail.jpg" alt="product-thumbnail" onclick="changePreviewImage('images/image-product-3.jpg', this)" height="80px" width="80px">
+                      <img src="images/image-product-4-thumbnail.jpg" alt="product-thumbnail" onclick="changePreviewImage('images/image-product-4.jpg', this)" height="80px" width="80px">
+                </div>
+            </div>
+        </div>
+        <div class="menu-bar-backdrop">
+                <div class="menu-bar-component" style="display: none;">
+                    <img class="menu-bar-close-icon" src="images/icon-close.svg" alt="close-icon" onclick="closeMenuBar()">
+                </div>
+        </div>
+        
+        <div class="cart-container" style="display: none">
+            <h4>Cart</h4>
+            <p style="display: none">Your cart is empty</p>
+            <div class="product-details" style="display: none">
+                <img class="cart-product-image" src="images/image-product-1-thumbnail.jpg" alt="product-thumbnail">
+                <div class="cart-product-details">
+                    <span>Fall Limited Edition Sneakers</span>
+                    <p></p>
+                </div>
+                <img class="delete-icon" src="images/icon-delete.svg" alt="delete-icon" onclick="deleteProduct()">
+            </div>
+            <button class="checkout-button">Checkout</button>
+        </div>
+
+        <div class="product-description">
+            <h4>SNEAKER COMPANY</h4>
+            <h1>Fall Limited Edition <br>Sneakers</h1>
+            <p>These low profile sneakers are your perfect casual wear companion. Featuring a durable
+                rubber outer sole, they'll withstand everything the weather can offer.</p>
+            <h2>$125.00</h2>
+            <h3>50%</h3>
+            <span class="actual-prize">$250.00</span>
+            <div class="cart">
+                <div class="count-container">
+                    <button class="count-btn minus"><img
+                            src="images/icon-minus.svg" alt="minus-icon"></button>
+                    <span class="count">0</span>
+                    <button class="count-btn plus"><img src="images/icon-plus.svg" alt="plus-icon"></button>
+                </div>
+                <div class="add-to-cart">
+                    <button class="add-to-cart-button">
+                        <img src="images/icon-cart.svg" alt="cart-icon">
+                        Add to cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./js/imageSelection.js"></script>
+    <script src="./js/cartDetails.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+@import '../main-scss/variables.scss';
+
+@media(max-width:391px){
+    body{
+        margin: 0;
+    }
+    .menu-bar{
+        display: block;
+        margin-right: -120px;
+    }
+    nav {
+        margin: 0 15px;
+        height: 60px;
+        border-bottom: none;
+        ul{
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 30vh;
+            margin-top: 400px;
+            margin-left: -400px;
+            li a{
+                color: black;
+                font-size: 20px;
+                margin: 20px;
+                font-weight: bold;
+            }
+            z-index: 500;
+        }
+    }
+    main,.cart{
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .main-logo{
+        margin-top: -5px;
+    }
+    .cart-icon{
+        height: 20px;
+        margin-right: 18px;
+    }
+
+    .avatar-icon{
+        height: 25px;
+    }
+    
+    #main-image{
+        height: 320px;
+        width: 100vw;
+        border-radius: 0px;
+    }
+    .product-description{
+        margin: 0 5%;
+        width: 100%;
+        h1{
+            font-size: 30px;
+        }
+    }
+    .product-thumbnail{
+        display: none;
+    }
+    .actual-prize{
+        display:inline-block;
+        margin-left: 40%;
+    }
+    .add-to-cart-button{
+        width: 100%;
+        margin-left: 0;
+    }
+    .count-container{
+        width: 94%;
+        margin-bottom: 20px;
+    }
+    .cart-count{
+        top: 1.5%;
+        right: 14%;
+    }
+    .cart-container{
+        right: -40%;
+        height: 280px;
+        width: 350px;
+        z-index: 200;
+    }
+    .checkout-button{
+        height: 55px;
+    }
+    .cart-product-image{
+        height: 65px;
+        width: 65px;
+    }
+    .product-details{
+        margin: 30px 0;
+    }
+    .cart-product-details{
+        margin: 10px 0;
+        span{
+            font-size: 16px;
+        }
+        p{
+            margin-left: 0;
+            text-align: left;
+        }
+    }
+    .delete-icon{
+        height: 20px;
+        width: 15px;
+        margin-top: 20px;
+    }
+    .navigate-icon{
+        display: block;
+        position: absolute;
+        border: none;
+        background-color: white;
+        border-radius: 50%;
+        cursor: pointer;
+        top: 23%;
+        height: 35px;
+        width: 35px;
+        &:hover path{
+            stroke: $main-color;
+        } 
+    }
+    .previous-product-icon{
+        @extend .navigate-icon;
+        left: 5%
+    }
+    .next-product-icon{
+        @extend.navigate-icon;
+        right: 5%;
+    }
+    .menu-bar-component{
+        background-color: white;
+        padding: 20px;
+        height: 100%;
+        width: 70%;
+    }
+    
+}

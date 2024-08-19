@@ -1,0 +1,86 @@
+@import './variables.scss';
+
+.product-description {
+    margin-left: 10%;
+    margin-top: 4%;
+    h4{
+        color: $main-color;
+        letter-spacing: 1.5px;
+        font-size: small;
+      }
+      p{
+        color: $text-color;
+      }
+      h1{
+        font-size: 35px;
+      }
+      h2{
+        display: inline-block;
+      }
+      h3{
+        margin-left:10px;
+        border: 2px solid  #FFF0D7;
+        border-radius: 3px;
+        font-size: 15px;
+        background-color: #FFF0D7;
+        color: $main-color;
+        display: inline-block;
+      }
+}
+
+.actual-prize{
+    display: block;
+    color: $text-color;
+    text-decoration: line-through;
+    margin-top: -15px;
+    margin-bottom: 25px;
+  }
+
+  .count-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    width: 140px;
+    background-color: rgba(247,248,253,255);
+    border-radius: $border-radius;
+    padding: 10px;
+    span{
+        font-weight: bold;
+    }
+  }
+
+  .count-btn {
+    background-color: #F7F8FD;
+    border: none;
+    cursor: pointer;
+  }
+
+  .cart{
+    display: flex;
+  }
+
+  .add-to-cart-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 250px;
+    border-radius: $border-radius;
+    background-color: $main-color;
+    border: none;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 15px;
+    &:hover{
+      opacity: 0.5;
+    }
+    img {
+      margin-right: 10px;
+      width: 15px;
+      height: 15px;
+      filter: brightness(0) invert(1);
+    }
+  }

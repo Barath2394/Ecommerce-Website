@@ -1,0 +1,79 @@
+.backdrop, .menu-bar-backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 300;
+}
+
+.product-preview {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#preview-image {
+  position: relative;
+  height: 470px;
+  width: 450px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.navigate-icon, .next-icon, .previous-icon {
+  position: absolute;
+  top: 38%;
+  height: 50px;
+  width: 50px;
+  border: none;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 101;
+}
+.navigate-icon:hover path, .next-icon:hover path, .previous-icon:hover path {
+  stroke: rgb(254, 125, 29);
+}
+
+.previous-icon {
+  left: -5%;
+}
+
+.next-icon {
+  right: -5%;
+}
+
+.close-icon {
+  position: absolute;
+  top: 6%;
+  right: 35.5%;
+  cursor: pointer;
+}
+.close-icon:hover path {
+  fill: rgb(254, 125, 29);
+}
+
+.product-preview-thumbnail {
+  display: flex;
+  margin-top: 20px;
+  width: 450px;
+  cursor: pointer;
+  justify-content: space-around;
+}
+.product-preview-thumbnail img {
+  border-radius: 10px;
+}
+.product-preview-thumbnail img:hover {
+  opacity: 0.6;
+}
+.product-preview-thumbnail .selected {
+  opacity: 30%;
+  border: 2px solid rgb(254, 125, 29);
+}
+.product-preview-thumbnail .selected img {
+  opacity: 0.7%;
+}/*# sourceMappingURL=backdrop.css.map */
